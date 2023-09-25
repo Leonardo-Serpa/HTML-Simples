@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+    function calculaImc(altura, peso) {
+
+        return peso / (altura * altura);
+}
+
+var nome = prompt ("Informe o seu nome");
+var alturaInformado = prompt (nome + ", informe a sua altura");
+var pesoInformado = prompt (nome + ", informe o seu peso");
+var imc = calculaImc (alturaInformado, pesoInformado);
+
+mostra(nome + ", O seu IMC é " + imc);
+
+if(imc < 18.5) {
+    mostra ("De acordo com seu IMC sua classificação é de magreza com 0 grau de obesidade");
+}
+
+if(imc >= 18.5 && imc <= 24.9) {
+    mostra ("De acordo com seu IMC sua classificação é normal com 0 grau de obesidade");
+}
+
+if(imc >= 25.0 && imc <= 29.9) {
+    mostra ("De acordo com seu IMC sua classificação é de sobrepeso com 1 grau de obesidade");
+}
+
+if(imc >= 30.0 && imc <= 39.9) {
+    mostra ("De acordo com seu IMC sua classificação é de obesidade com 2 grau de obesidade");
+}
+
+if(imc > 40.0) {
+    mostra ("De acordo com seu IMC sua classificação é de obesidade grave com 3 grau de obesidade");
+}
+
+</script>
